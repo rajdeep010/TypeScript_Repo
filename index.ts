@@ -65,14 +65,27 @@ console.log(resi)
 const arr = ['Rajdeep', 'Arindam', 'Arup', 'Soumabha', 'Souvik']
 
 // ! for traversing over the indices for-in loop
-for (const i in arr){
-    console.log(arr[i])
-}
+// for (const i in arr){
+//     console.log(arr[i])
+// }
 
 // ! for traversing over the values for-of loop
-for(const ele of arr){
-    console.log(ele)
-}
+// for(const ele of arr){
+//     console.log(ele)
+// }
 
 // ! for each loop
-arr.forEach((ele) => console.log(ele))
+// arr.forEach((ele) => console.log(ele))
+
+
+
+// ! array MAP METHOD
+// map method creates a new array by applying a provided fn. to each element of array
+const newArr = arr.map((val) => val + "-- hello --")
+console.log(newArr)
+
+
+// ! array FILTER METHOD
+const array = [1,2,4,5,7,8]
+const evens = array.filter((elm) => elm % 2 === 0)
+console.log(evens)

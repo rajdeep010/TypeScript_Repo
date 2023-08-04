@@ -47,13 +47,20 @@ var resi = greet3('Rajdeep');
 console.log(resi);
 var arr = ['Rajdeep', 'Arindam', 'Arup', 'Soumabha', 'Souvik'];
 // ! for traversing over the indices for-in loop
-for (var i in arr) {
-    console.log(arr[i]);
-}
+// for (const i in arr){
+//     console.log(arr[i])
+// }
 // ! for traversing over the values for-of loop
-for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-    var ele = arr_1[_i];
-    console.log(ele);
-}
+// for(const ele of arr){
+//     console.log(ele)
+// }
 // ! for each loop
-arr.forEach(function (ele) { return console.log(ele); });
+// arr.forEach((ele) => console.log(ele))
+// ! array MAP METHOD
+// map method creates a new array by applying a provided fn. to each element of array
+var newArr = arr.map(function (val) { return val + "-- hello --"; });
+console.log(newArr);
+// ! array FILTER METHOD
+var array = [1, 2, 4, 5, 7, 8];
+var evens = array.filter(function (elm) { return elm % 2 === 0; });
+console.log(evens);
