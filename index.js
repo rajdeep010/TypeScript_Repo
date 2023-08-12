@@ -64,3 +64,13 @@ console.log(newArr);
 var array = [1, 2, 4, 5, 7, 8];
 var evens = array.filter(function (elm) { return elm % 2 === 0; });
 console.log(evens);
+var obj = {
+    name: 'Rajdeep',
+    age: 23,
+    college: 'Jadavpur University',
+    address: {
+        city: 'Kolkata',
+        area: 'Salt Lake sector IV'
+    }
+};
+console.log(obj);

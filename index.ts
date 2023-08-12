@@ -89,3 +89,21 @@ console.log(newArr)
 const array = [1,2,4,5,7,8]
 const evens = array.filter((elm) => elm % 2 === 0)
 console.log(evens)
+
+
+const obj:{
+    name: string;
+    age: number;
+    college: string;
+    address:{city: string; area: string}
+} = {
+    name: 'Rajdeep',
+    age: 23,
+    college: 'Jadavpur University',
+    address: {
+        city: 'Kolkata',
+        area: 'Salt Lake sector IV'
+    }
+}
+
+console.log(obj)
