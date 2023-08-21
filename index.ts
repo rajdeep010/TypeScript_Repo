@@ -91,8 +91,9 @@ const evens = array.filter((elm) => elm % 2 === 0)
 console.log(evens)
 
 
+// ! Objects in ts
 const obj:{
-    name: string;
+    name: string;   // ? Semicolon
     age: number;
     college: string;
     address:{city: string; area: string}
@@ -107,3 +108,68 @@ const obj:{
 }
 
 console.log(obj)
+
+// ! Although there is type inference we write the types of each field
+
+// ! Type alias
+type Person = {
+    name: string;   // ! Semicolon
+    age: number;
+    college: string;
+    class?:string;  // this ? makes it optional
+    address:{city: string; area: string}
+}
+
+const person3:Person = {
+    name: 'Rajdeep',
+    age: 23,
+    college: 'Jadavpur University',
+    address: {
+        city: 'Kolkata',
+        area: 'Salt Lake sector IV'
+    }
+}
+
+type Product = {
+    name: string;
+    price: number;
+    quantity: number
+}
+
+const product = {
+    name: 'Laptop',
+    price: 1000,
+    quantity: 5
+}
+
+const calculatePrice = (product:Product) => {
+    return `${product.name} total cost : ${product.price*product.quantity};` 
+}
+
+console.log(calculatePrice(product)) 
+
+
+// !  ----**** Call Signature ****----
+// inside a class if we declare a function that is a method,
+// and if we define its type and paramters etc, then that is called 'Call Signature'
+
+type Student = {
+    name: string;
+    age: number;
+    gender?:string;
+    greet: (country:string) => string   // ! method call signature
+}
+
+const student1:Student = {
+    name: "Rajdeep",
+    age: 23,
+    greet: (country) => `Hello My name is ${student1.name} and I'm ${student1.age} years old & I am from ${country}`
+}
+
+const intro = (student1:Student) => {
+    const {name, age} = student1;
+    return `Hello My name is ${name} and I'm ${age} years old`;
+}
+
+console.log(intro(student1));
+console.log(student1.greet('India'))

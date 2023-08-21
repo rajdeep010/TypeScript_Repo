@@ -64,6 +64,7 @@ console.log(newArr);
 var array = [1, 2, 4, 5, 7, 8];
 var evens = array.filter(function (elm) { return elm % 2 === 0; });
 console.log(evens);
+// ! Objects in ts
 var obj = {
     name: 'Rajdeep',
     age: 23,
@@ -74,3 +75,32 @@ var obj = {
     }
 };
 console.log(obj);
+var person3 = {
+    name: 'Rajdeep',
+    age: 23,
+    college: 'Jadavpur University',
+    address: {
+        city: 'Kolkata',
+        area: 'Salt Lake sector IV'
+    }
+};
+var product = {
+    name: 'Laptop',
+    price: 1000,
+    quantity: 5
+};
+var calculatePrice = function (product) {
+    return "".concat(product.name, " total cost : ").concat(product.price * product.quantity, ";");
+};
+console.log(calculatePrice(product));
+var student1 = {
+    name: "Rajdeep",
+    age: 23,
+    greet: function (country) { return "Hello My name is ".concat(student1.name, " and I'm ").concat(student1.age, " years old & I am from ").concat(country); }
+};
+var intro = function (student1) {
+    var name = student1.name, age = student1.age;
+    return "Hello My name is ".concat(name, " and I'm ").concat(age, " years old");
+};
+console.log(intro(student1));
+console.log(student1.greet('India'));
